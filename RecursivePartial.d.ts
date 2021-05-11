@@ -8,5 +8,3 @@ type DeepPartial<T> = T extends Primitive ? T : DeepPartialObject<T>;
 type DeepPartialObject<T> = {
 	[P in keyof T]?: DeepPartial<T[P]>;
 };
-
-type ValueOf<T> = T[keyof T];
