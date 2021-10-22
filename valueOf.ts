@@ -1,1 +1,1 @@
-type ValueOf<T> = T[keyof T];
+type ValueOf<T> = T extends unknown[] ? T[number] : T[keyof T]
